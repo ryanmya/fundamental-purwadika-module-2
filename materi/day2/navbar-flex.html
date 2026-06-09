@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0f6969;
+      color: white;
+      padding: 16px;
+    }
+
+    .nav-items {
+      display: none;
+    }
+
+    .nav-btn {
+      display: none;
+    }
+
+    .nav-btn-menu {
+      display: block;
+      background-color: white;
+      color: #0f6969;
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .nav-items {
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+      }
+
+      .nav-btn {
+        display: block;
+        background-color: white;
+        color: #0f6969;
+        padding-left: 28px;
+        padding-right: 28px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      .nav-btn-menu {
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>BWC</h1>
+
+      <div class="nav-items">
+        <p>HOME</p>
+        <p>ABOUT</p>
+        <p>SERVICES</p>
+      </div>
+
+      <button class="nav-btn">CONTACT</button>
+      <button class="nav-btn-menu">MENU</button>
+    </div>
+  </body>
+</html>

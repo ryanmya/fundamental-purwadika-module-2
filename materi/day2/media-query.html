@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 1px solid black;
+        text-align: center;
+        background-color: aliceblue;
+        padding: 32px;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        .container {
+            background-color: aquamarine;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .container {
+            background-color: burlywood;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Responsive Media Query</h1>
+    </div>
+</body>
+</html>
