@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+    }
+
+    .main-page {
+      width: 100vw;
+      height: fit-content;
+      background-color: #ecf2f8;
+    }
+
+    .main {
+      width: 100%;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 5fr;
+      gap: 30px;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+
+    .main div {
+      /* border: 1px solid black; */
+      border-radius: 10px;
+    }
+
+    .item-1 {
+      grid-column: 1;
+      grid-row: 1;
+
+      background-color: #733fc8;
+      position: relative;
+    }
+    .item-2 {
+      grid-column: 1;
+      grid-row: 2;
+
+      background-color: #48556a;
+    }
+    .item-3 {
+      grid-column: 1;
+      grid-row: 3;
+      background-color: #ffffff;
+    }
+    .item-4 {
+      grid-column: 1;
+      grid-row: 4;
+
+      background-color: #19202d;
+    }
+    .item-5 {
+      grid-column: 1;
+      grid-row: 5;
+
+      background-color: #ffffff;
+    }
+
+    .quote-img {
+      width: 104px;
+      height: 102px;
+      background-color: #733fc8;
+      top: 0%;
+      right: 20%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .item-box {
+      padding: 25px 30px;
+    }
+
+    .sub-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      /* background-color: red; */
+    }
+
+    .sub-content .profile {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sub-content .account {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .sub-content .profile .name {
+      font-family: "Barlow Semi Condensed";
+      font-weight: 500;
+      font-size: 13px;
+      /* leading-trim: NONE; */
+      line-height: 13px;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+
+    .text-light {
+      color: #48556a !important;
+    }
+
+    .dim {
+      opacity: 0.7;
+    }
+
+    .sub-content .profile .detail {
+      font-family: "Barlow Semi Condensed";
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 11px;
+      letter-spacing: 0px;
+      color: #ffffff93;
+    }
+
+    .sub-content .body {
+      font-family: "Barlow Semi Condensed";
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+
+    .sub-content .sub-body {
+      font-family: "Barlow Semi Condensed";
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 0px;
+      color: #cfcfcf;
+    }
+
+    @media (min-width: 1024px) {
+      .main-page {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main {
+        width: 1110px;
+        height: 572px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        /* padding: 20px; */
+        box-sizing: border-box;
+
+        overflow: visible;
+      }
+
+      .item-1 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+
+        background-color: #733fc8;
+        position: relative;
+      }
+      .item-2 {
+        grid-column: 3;
+        grid-row: 1;
+
+        background-color: #48556a;
+      }
+      .item-3 {
+        grid-column: 1;
+        grid-row: 2;
+
+        background-color: #ffffff;
+      }
+      .item-4 {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+
+        background-color: #19202d;
+      }
+      .item-5 {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+
+        background-color: #ffffff;
+      }
+    }
+  </style>
+  <body>
+    <div class="main-page">
+      <div class="main">
+        <div class="item-box item-1">
+          <img class="quote-img" src="./assets/bg-icon-small.svg" alt="" />
+          <div class="sub-content">
+            <div class="profile">
+              <img src="./assets/pic1.png" alt="" />
+              <span class="account">
+                <div class="name">Daniel Clifford</div>
+                <div class="detail">Verified Graduate</div>
+              </span>
+            </div>
+            <div class="body">
+              I received a job offer mid-course, and the subjects I learned were
+              current, if not more so, in the company I joined. I honestly feel
+              I got every penny’s worth.
+            </div>
+            <div class="sub-body dim">
+              “ I was an EMT for many years before I joined the bootcamp. I’ve
+              been looking to make a transition and have heard some people who
+              had an amazing experience here. I signed up for the free intro
+              course and found it incredibly fun! I enrolled shortly thereafter.
+              The next 12 weeks was the best - and most grueling - time of my
+              life. Since completing the course, I’ve successfully switched
+              careers, working as a Software Engineer at a VR startup. ”
+            </div>
+          </div>
+        </div>
+        <div class="item-box item-2">
+          <div class="sub-content">
+            <div class="profile">
+              <img src="./assets/pic2.png" alt="" />
+              <span class="account">
+                <div class="name">Jonathan Walters</div>
+                <div class="detail">Verified Graduate</div>
+              </span>
+            </div>
+            <div class="body">
+              The team was very supportive and kept me motivated
+            </div>
+            <div class="sub-body dim">
+              “ I started as a total newbie with virtually no coding skills. I
+              now work as a mobile engineer for a big company. This was one of
+              the best investments I’ve made in myself. “
+            </div>
+          </div>
+        </div>
+        <div class="item-box item-3">
+          <div class="sub-content">
+            <div class="profile">
+              <img src="./assets/pic4.png" alt="" />
+              <span class="account">
+                <div class="name text-light">Jeanette Harmon</div>
+                <div class="detail text-light dim">Verified Graduate</div>
+              </span>
+            </div>
+            <div class="body text-light">
+              An overall wonderful and rewarding experience
+            </div>
+            <div class="sub-body text-light dim">
+              “ Thank you for the wonderful experience! I now have a job I
+              really enjoy, and make a good living while doing something I love.
+              ”
+            </div>
+          </div>
+        </div>
+        <div class="item-box item-4">
+          <div class="sub-content">
+            <div class="profile">
+              <img src="./assets/pic5.png" alt="" />
+              <span class="account">
+                <div class="name">Patrick Abrams</div>
+                <div class="detail">Verified Graduate</div>
+              </span>
+            </div>
+            <div class="body">
+              Awesome teaching support from TAs who did the bootcamp themselves.
+              Getting guidance from them and learning from their experiences was
+              easy.
+            </div>
+            <div class="sub-body dim">
+              “ The staff seem genuinely concerned about my progress which I
+              find really refreshing. The program gave me the confidence
+              necessary to be able to go out in the world and present myself as
+              a capable junior developer. The standard is above the rest. You
+              will get the personal attention you need from an incredible
+              community of smart and amazing people. ”
+            </div>
+          </div>
+        </div>
+        <div class="item-box item-5">
+          <div class="sub-content">
+            <div class="profile">
+              <img src="./assets/pic3.png" alt="" />
+              <span class="account">
+                <div class="name text-light">Kira Whittle</div>
+                <div class="detail text-light dim">Verified Graduate</div>
+              </span>
+            </div>
+            <div class="body text-light">
+              Such a life-changing experience. Highly recommended!
+            </div>
+            <div class="sub-body text-light dim">
+              “ Before joining the bootcamp, I’ve never written a line of code.
+              I needed some structure from professionals who can help me learn
+              programming step by step. I was encouraged to enroll by a former
+              student of theirs who can only say wonderful things about the
+              program. The entire curriculum and staff did not disappoint. They
+              were very hands-on and I never had to wait long for assistance.
+              The agile team project, in particular, was outstanding. It took my
+              learning to the next level in a way that no tutorial could ever
+              have. In fact, I’ve often referred to it during interviews as an
+              example of my developent experience. It certainly helped me land a
+              job as a full-stack developer after receiving multiple offers.
+              100% recommend! ”
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
